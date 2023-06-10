@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РГР</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+    <script src="jQuery.js"></script>
+
+</head>
+
+<body>
+<header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    
+    <div class="logo">
+        <img src="logo.jpg" alt="Логотип" hspace="15px">
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="teext">Головна</a></li>
+            <li><a href="index3.html" class="teext">Досягнення</a></li>
+            <li><a href="index2.html" class="teext">Галерея картинок</a></li>
+            <li><a href="index4.html" class="teext">Контакти</a></li>
+        </ul>
+
+    </nav>
+</header>
+<style>
+body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+.form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: SaddleBrown;
+        border-radius: 5px;
+        color: Goldenrod;
+    }
+
+.form-group {
+        margin-bottom: 20px;
+    margin-right: 20px;
+    }
+
+.form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+.form-group input,
+.form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+        
+    }
+
+.form-group textarea {
+        resize: vertical;
+        height: 100px;
+    }
+
+.form-group button {
+        padding: 10px 20px;
+        background-color: SandyBrown;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.form-group button:hover {
+        background-color: #45a049;
+    }
+</style>
+<body>
+<h1>Контакти для зв'язку</h1>
+<div class="form-container">
+    <h2>Анкета для зв'язку</h2>
+    
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="message">Повідомлення:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit">Надіслати</button>
+        </div>
+    </form>
+</div>
+<p class="text" align="center">.</p>
+
+
+<footer>
+    <p>© 2023 Науковий центр закладу вищої освіти</p>
+</footer>
+</body>
+
+</html>

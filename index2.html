@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РГР</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+    <script src="jQuery.js"></script>
+
+</head>
+
+<body>
+<header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    
+    <div class="logo">
+        <img src="logo.jpg" alt="Логотип" hspace="15px">
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="teext">Головна</a></li>
+            <li><a href="index3.html" class="teext">Досягнення</a></li>
+            <li><a href="index2.html" class="teext">Галерея картинок</a></li>
+            <li><a href="index4.html" class="teext">Контакти</a></li>
+        </ul>
+
+    </nav>
+</header>
+<div class="slider-container">
+    <div class="slider">
+      <img src="a1.jpg" alt="Image 1">
+      <img src="a2.jpg" alt="Image 2">
+      <img src="a3.jpg" alt="Image 3">
+      <img src="a4.jpg" alt="Image 4">
+      <img src="a5.jpg" alt="Image 5">
+      
+    </div>
+  </div>
+  <div class="slider-navigation">
+    <button class="prev-button"><</button>
+    <button class="next-button">></button>
+  </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+  let currentSlide = 0;
+
+  prevButton.addEventListener('click', function() {
+    currentSlide = (currentSlide - 1 + slider.children.length) % slider.children.length;
+    updateSliderPosition();
+  });
+
+  nextButton.addEventListener('click', function() {
+    currentSlide = (currentSlide + 1) % slider.children.length;
+    updateSliderPosition();
+  });
+
+  function updateSliderPosition() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  function startSlideInterval() {
+    slideInterval = setInterval(function() {
+      currentSlide = (currentSlide + 1) % slider.children.length;
+      updateSliderPosition();
+    }, 15000); 
+  }
+
+  function resetSlideInterval() {
+    clearInterval(slideInterval);
+    startSlideInterval();
+  }
+
+  startSlideInterval();
+
+});
+
+</script>
+<footer>
+    <p>© 2023 Науковий центр закладу вищої освіти</p>
+</footer>
+</body>
+
+</html>
+
+  
